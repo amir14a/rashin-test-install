@@ -15,6 +15,13 @@
         <br>
         <a style="font-size: 24;"  href="moshir://checkPayment">OPEN MOSHIR</a>
         <script>
+            function delay(delayInms) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(2);
+    }, delayInms);
+  });
+}
             async function sample() {
   let delayres = await delay(8000);
   window.location.href = 'moshir://checkPayment';
